@@ -1,0 +1,344 @@
+<link rel="import" href="../bower_components/polymer/polymer.html"><link rel="import" href="../bower_components/paper-styles/typography.html"><link rel="import" href="../bower_components/paper-styles/shadow.html"><link rel="import" href="../bower_components/paper-styles/color.html"><link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html"><dom-module id="shared-styles"><template><style is="custom-style">
+
+      app-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        background-color: var(--primary-color);
+        --app-header-background-front-layer: {
+          background-image: url(../images/places/connemara.jpg);
+          background-position: center center;
+        };
+      }
+
+      app-toolbar.middle {
+        height: 300px;
+        height: 60vh;
+      }
+
+      app-toolbar.bottom {
+        height: 92px;
+        /*overflow: hidden;*/
+      }
+
+      [main-title] {
+        margin-left: 64px;
+        font-size: 32px;
+              font-weight: 100;
+        margin-bottom: 395px;
+        width: 100%;
+        color: white;
+        font-family: 'Roboto Slab', serif;
+        text-shadow: 1px 1px 30px var(--primary-color);
+        transition: text-shadow 0.3s ease;
+      }
+
+      [condensed-title] {
+        margin-left: 20px;      font-weight: 100;
+        font-family: 'Roboto Slab', serif;
+        transition: text-shadow 0.3s ease;
+      }
+
+      paper-tabs {
+        margin-right: 100px;
+        bottom: 0;
+        height: 64px;
+        position: absolute;
+        right: 0px;
+        --paper-tabs-selection-bar: {
+          height: 6px;
+        };
+        --paper-tabs-selection-bar-color: var(--light-primary-color);
+      }
+
+      paper-tab {
+        --paper-tab-ink: var(--light-primary-color);
+      }
+
+      #me {
+        box-sizing: border-box;
+        width: 750px;
+        margin: auto;
+        padding: calc(60vh + 286px) 30px 130px 30px;
+        @apply(--layout-horizontal);
+      }
+
+      #nom {
+        font-size: 35px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        color: var(--paper-grey-900);
+        font-family: 'Roboto Slab', serif;
+      }
+
+      #description {
+        color: var(--paper-grey-700);
+        font-size: 18px;
+        font-weight: 100;
+      }
+
+      #photo {
+        margin-left: 90px;
+        margin-bottom: 30px;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+      }
+
+      iron-auto-scroll-spy {
+        position: absolute;
+        top: 0;
+      }
+
+      #jumbotron {
+        background: var(--paper-deep-purple-50);
+        height: 400px;
+        margin-bottom: 100px;
+        margin: auto;
+        --app-box-background-front-layer: {
+          background-position: bottom;
+          padding-bottom: 200px;
+          margin-top: -200px;
+          height: 400px;
+        };
+      }
+      #jumbotron-content {
+        @apply(--layout-center-center);
+        @apply(--layout-horizontal);
+        height: 100%;
+        font-family: 'Roboto Slab', serif;
+        color: white;
+        text-align: center;
+      }
+      #jumbotron-content h1 {
+        text-shadow: 0 0 80px black;
+      }
+      #test {
+        color: white;
+        width: 
+      }
+      #slider {
+        width: 100%;
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+      }
+      #slider > div {
+        padding: 24px;
+      }
+      #slider paper-slider {
+        @apply(--layout-flex);
+      }
+
+      /*#dashed {
+        width: 100%;
+        border-top: 3px dashed #e6e6e6;
+        transform: skewY(-2deg);
+      }
+
+      #cut {
+        left: 200px;
+        top: -20px;
+        position: absolute;
+        width: 36px;
+        height: 36px;
+      }*/
+      #france-box {
+        height: 400px;
+        --app-box-background-front-layer: {
+          background-image: url(../images/paris.jpg);
+          background-position: bottom;
+          padding-bottom: 200px;
+          margin-top: -200px;
+          height: 400px;
+         };
+      }
+
+      .title-layer {
+        @apply(--layout-end-justified);
+        @apply(--layout-vertical);
+        padding-left: 20%;
+        padding-bottom: 30px;
+        pointer-events: none;
+        font-size: 24px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 150px;
+        color: white;
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+        z-index: 1;
+      }
+
+      .subtitle {
+        font-family: 'Roboto Slab', serif;
+        font-size: 16px;
+      }
+
+      #row-fitter iron-image {
+        @apply(--layout-fit);
+      }
+      row-item {
+        position: relative;
+      }
+      row-item paper-ripple {
+        z-index: 1;
+      }
+
+      #row-fitter {
+        position: relative;
+        padding-bottom: 60px;
+        background: white;
+      }
+
+      .top-margin {
+        margin-top: 150px;
+      }
+
+      #carousel {
+        height: 400px;
+        position: relative;
+        z-index: 1;
+      }
+      #carousel .slide {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        margin-right: 20px;
+      }
+      #carousel .slide iron-image {
+        @apply(--layout-fit);
+      }
+
+      #end {
+        height: 500px;
+        background-color: var(--paper-red-a200);
+      }
+
+      .centered-text {
+        padding: 50px 20% 100px 20%;
+        background: white;
+      }
+      #btn-wrapper {
+        width: 100%;
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+      }
+      a {
+        text-decoration: none;
+      }
+      #full-album-btn {
+        background-color: var(--paper-deep-purple-a200);
+        top: 60px;
+        color: white;
+        position: relative;
+        text-decoration: none;
+      }
+      #full-album-btn iron-icon {
+        padding-right: 10px;
+      }
+      #footer {
+        background: var(--primary-color);
+        padding-top: 120px;
+        color: white;
+        text-align: right;
+        font-size: 20px;
+        font-family: 'Roboto Slab', serif;
+        overflow: hidden;
+      }
+      #gloriousBackground {
+        /*position: absolute;*/
+        transform: skewY(-2deg);
+        height: 60px;
+        position: relative;
+        bottom: -30px;
+       /* top: 0;
+        bottom: -100px;
+        left: 0;
+        right: 0;*/
+        background: var(--primary-color);
+        z-index: 1;
+      }
+
+      #gloriousText {
+        position: relative;
+        background: #fafafa;
+        color: var(--paper-grey-900);
+        padding: 60px 40px 40px 0;
+      }
+      #gloriousText > p {
+        margin: 5px;
+      }
+
+      #contacts {
+        font-family: 'Roboto Slab', serif;
+        @apply(--layout-vertical);
+        @apply(--layout-center);
+        transform: rotate(-2deg);
+      }
+
+      #socials {
+        @apply(--layout-horizontal);
+      }
+      #socials > a > paper-icon-button {
+        height: 80px;
+        width: 80px;
+        color: white;
+      }
+      #socials > a {
+        height: 100px;
+        width: 100px;
+        @apply(--layout);
+        @apply(--layout-center-center);
+      }
+
+      @media (max-width: 750px) {
+        #me {
+          width: 100%;
+          @apply(--layout-vertical-reverse);
+          text-align: center;
+        }
+        #photo {
+          margin: auto;
+          margin-bottom: 10px;
+        }
+        [main-title] {
+          margin: 0 20px 395px 20px;
+          white-space: normal !important;
+          text-align: center;
+        }
+        #cut {
+          left: 100px;
+        }
+        paper-tabs {
+          width: 100%;
+          margin: 0;
+          left: 0;
+        }
+        .card-box {
+          @apply(--shadow-none);
+        }
+        .top-margin {
+          margin-top: 0;
+        }
+        #dashed {
+          margin-bottom: 100px;
+        }
+        .title-layer {
+          padding-left: 30px;
+        }
+        .centered-text {
+          padding: 50px 30px;
+        }
+        #gloriousText {
+        position: relative;
+        background: #fafafa;
+        color: var(--paper-grey-900);
+        padding: 60px 10px 10px 0;
+      }
+      }
+
+    </style></template></dom-module>
